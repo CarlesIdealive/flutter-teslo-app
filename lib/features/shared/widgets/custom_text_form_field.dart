@@ -28,6 +28,10 @@ class CustomTextFormField extends StatelessWidget {
     final colors = Theme.of(context).colorScheme;
 
     final border = OutlineInputBorder(
+      // bottom: const BorderSide(
+      //   color: Colors.transparent,
+      //   style: BorderStyle.solid
+      // ),
       borderSide: const BorderSide(color: Colors.transparent),
       borderRadius: BorderRadius.circular(40)
     );
@@ -58,7 +62,9 @@ class CustomTextFormField extends StatelessWidget {
           enabledBorder: border,
           focusedBorder: border,
           errorBorder: border.copyWith( borderSide: BorderSide( color: Colors.red.shade800 )),
-          focusedErrorBorder: border.copyWith( borderSide: BorderSide( color: Colors.red.shade800 )),
+          focusedErrorBorder: border.copyWith( 
+            borderSide: BorderSide( color: Colors.red.shade800 )
+          ),
           isDense: true,
           label: label != null ? Text(label!) : null,
           hintText: hint,

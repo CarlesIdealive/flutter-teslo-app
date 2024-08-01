@@ -29,9 +29,8 @@ class CustomFilledButton extends StatelessWidget {
         )
       )),
         
-  
       onPressed: onPressed, 
-      child: Text(text)
+      child: Text(text, style: const TextStyle(color: Colors.white))
     );
   }
 }
